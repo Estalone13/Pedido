@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>💖 Rafinha 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #sim {
+      background-color: #00ff88;
+    }
+
+    #nao {
+      background-color: #ff4d4d;
+      position: absolute;
+    }
+
+    #mensagem {
+      display: none;
+      font-size: 28px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Rafinha 💖</h1>
+  <p>
+    Desde que você apareceu na minha vida, tudo ficou mais bonito...<br><br>
+    Quer namorar comigo? 😍
+  </p>
+
+  <button id="sim">Sim 💘</button>
+  <button id="nao">Não 😢</button>
+
+  <div id="mensagem">
+    💖 Eu sabia!!! Te amo muito, Rafinha! 💖
+  </div>
+
+  <script>
+    const nao = document.getElementById("nao");
+    const sim = document.getElementById("sim");
+    const mensagem = document.getElementById("mensagem");
+
+    // Botão NÃO foge
+    nao.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+
+      nao.style.left = x + "px";
+      nao.style.top = y + "px";
+    });
+
+    // Quando clicar SIM
+    sim.addEventListener("click", () => {
+      mensagem.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
